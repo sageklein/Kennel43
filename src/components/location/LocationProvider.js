@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 /*
     The context is imported and used by individual components
@@ -14,7 +14,8 @@ export const LocationProvider = (props) => {
 
 	const getLocations = () => {
 		return fetch("http://localhost:8088/locations")
-			.then((res) => res.json())
+			.then((res) => {
+				return res.json()})
 			.then(setLocations);
 	};
 

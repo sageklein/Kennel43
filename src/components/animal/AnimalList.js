@@ -1,36 +1,30 @@
 import React, { useContext, useEffect } from "react";
 import { AnimalContext } from "./AnimalProvider";
-import { Animal } from "./Animal";
+import { AnimalCard } from "./AnimalCard";
 import "./Animal.css";
 
 export const AnimalList = () => {
 	// This state changes when `getAnimals()` is invoked below
 	const { animals, getAnimals } = useContext(AnimalContext);
 
-	/*
-        What's the effect this is reponding to? Component was
-        "mounted" to the DOM. React renders blank HTML first,
-        then gets the data, then re-renders.
-    */
+	//useEffect - reach out to the world for something
 	useEffect(() => {
-		console.log("AnimalList: Initial render before data");
+		console.log("AnimalList: useEffect - getAnimals");
 		getAnimals();
 	}, []);
 
-	/*
-        This effect is solely for learning purposes. The effect
-        it is responding to is that the Animal state changed.
-    */
-	useEffect(() => {
-		console.log("AnimalList: Animal state changed");
-		console.log(animals);
-	}, [animals]);
-
 	return (
 		<div className="animals">
-			{animals.map((animal) => (
-				<Animal key={animal.id} animal={animal} />
-			))}
+			{console.log("AnimalList: Render")}
+			{animals.map((animal) => {
+				return (
+					<AnimalCard
+						key={animal.id}
+						location={animal.location.name}
+						animal={animal}
+					/>
+				);
+			})}
 		</div>
 	);
 };
