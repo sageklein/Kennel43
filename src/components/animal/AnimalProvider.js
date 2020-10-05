@@ -18,13 +18,19 @@ export const AnimalProvider = (props) => {
 			.then(setAnimals);
 	};
 
-	const addAnimal = (location) => {
+	const addAnimal = (animal) => {
 		return fetch("http://localhost:8088/animals", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(location),
+			body: JSON.stringify(animal),
+		}).then(getAnimals);
+	};
+
+	const releaseAnimal = (animalId) => {
+		return fetch(`http://localhost:8088/animals/${animalId}`, {
+			method: "DELETE",
 		}).then(getAnimals);
 	};
 
@@ -34,6 +40,7 @@ export const AnimalProvider = (props) => {
 				animals,
 				getAnimals,
 				addAnimal,
+				releaseAnimal,
 			}}
 		>
 			{props.children}
