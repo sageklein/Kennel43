@@ -46,6 +46,7 @@ export const AnimalProvider = (props) => {
 				addAnimal,
 				getAnimals,
 				getAnimalById,
+				releaseAnimal,
 			}}
 		>
 			{props.children}

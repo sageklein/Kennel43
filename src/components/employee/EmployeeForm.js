@@ -103,16 +103,18 @@ export const EmployeeForm = () => {
 					</select>
 				</div>
 			</fieldset>
-			<button
-				type="submit"
-				onClick={(evt) => {
-					evt.preventDefault(); // Prevent browser from submitting the form
-					constructNewEmployee();
-				}}
-				className="btn btn-primary"
-			>
-				Save Employee
-			</button>
+			<div className="btn">
+				<button
+					type="submit"
+					onClick={(evt) => {
+						evt.preventDefault(); // Prevent browser from submitting the form
+						constructNewEmployee();
+					}}
+					className="btn btn-primary"
+				>
+					Save
+				</button>
+			</div>
 		</form>
 	);
 };

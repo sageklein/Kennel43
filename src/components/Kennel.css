@@ -8,11 +8,14 @@ button,
 input,
 select,
 textarea {
-  background-color: F6FBFE;
+  background-color: #ffffff;
   color: #404040;
   font-family: "Comfortaa", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
+  border-radius: .2em;
+  padding: 1px 6px 1px 6px;
+
 }
 
 h1,
@@ -38,4 +41,26 @@ strong {
 
 address {
   margin: 0 0 1.5em;
+}
+/* unvisited link */
+a:link {
+  color: Black;
+}
+
+/* visited link */
+a:visited {
+  color: #404040;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c5d4de;
+}
+
+/* selected link */
+a:active {
+  color: Black;
+}
+a:link {
+  text-decoration: none;
 }

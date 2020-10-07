@@ -4,7 +4,9 @@ import "./Animal.css";
 import { useParams, useHistory } from "react-router-dom";
 
 export const AnimalDetail = () => {
-	const { releaseAnimal, getAnimalById } = useContext(AnimalContext);
+	const { animals, getAnimals, getAnimalById, releaseAnimal } = useContext(
+		AnimalContext
+	);
 
 	const [animal, setAnimal] = useState({});
 	const [location, setLocation] = useState({});
@@ -23,11 +25,24 @@ export const AnimalDetail = () => {
 	}, []);
 
 	return (
-		<section className="animal">
-			<h3 className="animal__name">{animal.name}</h3>
-			<div className="animal__breed">{animal.breed}</div>
-			<div className="animal__location">Location: {location.name}</div>
-			<div className="animal__owner">Customer: {customer.name}</div>
-		</section>
+		<>
+			<section className="animal">
+				<h3 className="animal__name">{animal.name}</h3>
+				<div className="animal__breed">{animal.breed}</div>
+				<div className="animal__location">
+					Location: {location.name}
+				</div>
+				<div className="animal__owner">Customer: {customer.name}</div>
+			</section>
+			<button
+				onClick={() => {
+					releaseAnimal(animal.id).then(() => {
+						history.push("/animals");
+					});
+				}}
+			>
+				Release
+			</button>
+		</>
 	);
 };
