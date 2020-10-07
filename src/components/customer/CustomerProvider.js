@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, createContext } from "react";
 
 /*
     The context is imported and used by individual components
     that need data
 */
-export const CustomerContext = React.createContext();
+export const CustomerContext = createContext();
 
 /*
  This component establishes what data can be used.

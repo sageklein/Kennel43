@@ -3,40 +3,27 @@ import { EmployeeContext } from "./EmployeeProvider";
 import { LocationContext } from "../location/LocationProvider";
 import { AnimalContext } from "../animal/AnimalProvider";
 import "./Employee.css";
+import { useHistory } from "react-router-dom";
 
 export const EmployeeForm = (props) => {
-	const { addEmployee } = useContext(EmployeeContext);
+	const { addEmployee, employees, getEmployees } = useContext(
+		EmployeeContext
+	);
 	const { locations, getLocations } = useContext(LocationContext);
 	const { animals, getAnimals } = useContext(AnimalContext);
 
-	/*
-        Create references that can be attached to the input
-        fields in the form. This will allow you to get the
-        value of the input fields later when the user clicks
-        the save button.
-
-        No more `document.querySelector()` in React.
-    */
 	const name = useRef(null);
 	const location = useRef(null);
+	const employee = useRef(null);
 	const animal = useRef(null);
 
-	/*
-        Get animal state and location state on initialization.
-    */
 	useEffect(() => {
-		getAnimals().then(getLocations);
+		getEmployees().then(getLocations);
 	}, []);
 
 	const constructNewEmployee = () => {
-		/*
-            The `location` and `animal` variables below are
-            the references attached to the input fields. You
-            can't just ask for the `.value` property directly,
-            but rather `.current.value` now in React.
-        */
 		const locationId = parseInt(location.current.value);
-		const animalId = parseInt(animal.current.value);
+		const employeeId = parseInt(employee.current.value);
 
 		if (locationId === 0) {
 			window.alert("Please select a location");
@@ -44,11 +31,12 @@ export const EmployeeForm = (props) => {
 			addEmployee({
 				name: name.current.value,
 				locationId,
-				animalId,
+				employeeId,
 			}).then(() => props.history.push("/employees"));
 		}
 	};
 
+	const history = useHistory();
 	return (
 		<form className="employeeForm">
 			<h2 className="employeeForm__title">New Employee</h2>

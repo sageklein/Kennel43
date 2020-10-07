@@ -14,19 +14,24 @@ export const AnimalList = () => {
 		getAnimals();
 	}, []);
 
-const history = useHistory()
+	const history = useHistory();
 
-return (
-    <div className="animals">
-        <h2>Animals</h2>
-			<button onClick={() => {history.push("/animals/create")}}>
-                Add Animal
-        	</button>
-         {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
-        }
-    </div>
-)
-	}
+	return (
+		<>
+			<button
+				className="add__btn"
+				onClick={() => {
+					history.push("/animals/create");
+				}}
+			>
+				Add Animal
+			</button>
+			<div className="animals">
+				<h2>Animals</h2>
+				{animals.map((animal) => {
+					return <AnimalCard key={animal.id} animal={animal} />;
+				})}
+			</div>
+		</>
+	);
+};

@@ -9,7 +9,7 @@ import { CustomerProvider } from "./customer/CustomerProvider";
 import { CustomerList } from "./customer/CustomerList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeList } from "./employee/EmployeeList";
-import { EmployeeForm } from "./employee/EmployeeForm"
+import { EmployeeForm } from "./employee/EmployeeForm";
 
 export const ApplicationViews = (props) => {
 	return (
@@ -31,13 +31,13 @@ export const ApplicationViews = (props) => {
 			</AnimalProvider>
 
 			<AnimalProvider>
-    			<LocationProvider>
-        			<CustomerProvider>
-           				 <Route exact path="/animals/create">
-                			<AnimalForm />
-            			</Route>
-       				</CustomerProvider>
-    			</LocationProvider>
+				<LocationProvider>
+					<CustomerProvider>
+						<Route exact path="/animals/create">
+							<AnimalForm />
+						</Route>
+					</CustomerProvider>
+				</LocationProvider>
 			</AnimalProvider>
 
 			<CustomerProvider>
@@ -46,17 +46,21 @@ export const ApplicationViews = (props) => {
 				</Route>
 			</CustomerProvider>
 
-			<EmployeeProvider>
-				<Route
-					exact
-					path="/employees"
-					render={(props) => <EmployeeList {...props} />}
-				/>
+			<AnimalProvider>
+				<EmployeeProvider>
+					<LocationProvider>
+						<Route
+							exact
+							path="/employees"
+							render={(props) => <EmployeeList {...props} />}
+						/>
 
-				<Route exact path="/employees/create">
-					<EmployeeForm />
-				</Route>
-			</EmployeeProvider>
+						<Route exact path="/employees/create">
+							<EmployeeForm />
+						</Route>
+					</LocationProvider>
+				</EmployeeProvider>
+			</AnimalProvider>
 		</>
 	);
 };
