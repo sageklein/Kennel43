@@ -18,6 +18,8 @@ export const AnimalList = () => {
 
 	return (
 		<>
+			<h2>Animals</h2>
+			<div className="btn">
 			<button
 				className="add__btn"
 				onClick={() => {
@@ -26,10 +28,12 @@ export const AnimalList = () => {
 			>
 				Add Animal
 			</button>
+			</div>
 			<div className="animals">
-				<h2>Animals</h2>
 				{animals.map((animal) => {
-					return <AnimalCard key={animal.id} animal={animal} />;
+					return <AnimalCard 
+					key={animal.id} 
+					animal={animal} />;
 				})}
 			</div>
 		</>

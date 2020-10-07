@@ -5,6 +5,7 @@ import { AnimalProvider } from "./animal/AnimalProvider";
 import { LocationList } from "./location/LocationList";
 import { AnimalList } from "./animal/AnimalList";
 import { AnimalForm } from "./animal/AnimalForm";
+import { AnimalDetail } from "./animal/AnimalDetail";
 import { CustomerProvider } from "./customer/CustomerProvider";
 import { CustomerList } from "./customer/CustomerList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
@@ -38,6 +39,12 @@ export const ApplicationViews = (props) => {
 						</Route>
 					</CustomerProvider>
 				</LocationProvider>
+			</AnimalProvider>
+
+			<AnimalProvider>
+			<Route exact path="/animals/detail/:animalId(\d+)">
+				<AnimalDetail />
+			</Route>
 			</AnimalProvider>
 
 			<CustomerProvider>

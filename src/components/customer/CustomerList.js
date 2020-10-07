@@ -31,16 +31,18 @@ export const CustomerList = () => {
 
 	return (
 		<>
-			<button
-				className="add__btn"
-				onClick={() => {
-					history.push("/customers/create");
-				}}
-			>
-				Add Customer
-			</button>
+			<h2>Customers</h2>
+			<div className="btn">
+				<button
+					className="add__btn"
+					onClick={() => {
+						history.push("/customers/create");
+					}}
+				>
+					Add Customer
+				</button>
+			</div>
 			<div className="customers">
-				<h2>Customers</h2>
 				{customers.map((customer) => {
 					return (
 						<CustomerCard key={customer.id} customer={customer} />

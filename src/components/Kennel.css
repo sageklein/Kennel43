@@ -8,6 +8,7 @@ button,
 input,
 select,
 textarea {
+  background-color: F6FBFE;
   color: #404040;
   font-family: "Comfortaa", Arial, sans-serif;
   font-size: 14px;
@@ -22,6 +23,7 @@ h5,
 h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
+  padding-left: 1em ;
 }
 
 p {
