@@ -1,92 +1,92 @@
 {
-	"animals": [
-		{
-			"id": 1,
-			"name": "Doodles",
-			"breed": "Poodle",
-			"customerId": 1,
-			"locationId": 2
-		},
-		{
-			"id": 2,
-			"name": "Koopa",
-			"breed": "Tortoise",
-			"customerId": 1,
-			"locationId": 2
-		},
-		{
-			"id": 3,
-			"name": "Maggie",
-			"breed": "Tabby",
-			"customerId": 1,
-			"locationId": 2
-		},
-		{
-			"name": "Thomas",
-			"breed": "Tuxedo Boy",
-			"locationId": 2,
-			"customerId": 2,
-			"id": 4
-		}
-	],
-	"customers": [
-		{
-			"id": 1,
-			"email": "hannah@hall.com",
-			"name": "Hannah Hall",
-			"address": "7002 Chestnut Ct"
-		},
-		{
-			"id": 2,
-			"email": "link@bad.com",
-			"name": "Link Bad",
-			"address": "404 Error Rd"
-		},
-		{
-			"id": 3,
-			"email": "lisa@newcar.com",
-			"name": "Lisa Newcar",
-			"address": "5000 Port Ct"
-		},
-		{
-			"id": 4,
-			"email": "hannah@hall.com",
-			"name": "Hannah Hall",
-			"address": "7002 Chestnut Ct"
-		}
-	],
-	"employees": [
-		{
-			"id": 1,
-			"name": "Jeremy Baker",
-			"locationId": 2
-		},
-		{
-			"id": 2,
-			"name": "Bake Jeremy",
-			"locationId": 2
-		},
-		{
-			"id": 3,
-			"name": "Jake Beremy",
-			"locationId": 2
-		}
-	],
-	"locations": [
-		{
-			"id": 1,
-			"name": "Nashville North",
-			"address": "8422 Johnson Pike"
-		},
-		{
-			"id": 2,
-			"name": "Nashville South",
-			"address": "209 Emory Drive"
-		},
-		{
-			"id": 3,
-			"name": "Nashville East",
-			"address": "7730 Fillpot Rd"
-		}
-	]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "id": 2,
+      "name": "Koopa",
+      "breed": "Tortoise",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Maggie",
+      "breed": "Tabby",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "name": "Thomas",
+      "breed": "Tuxedo Boy",
+      "locationId": 2,
+      "customerId": 2,
+      "id": 4
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "email": "hannah@hall.com",
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "email": "link@bad.com",
+      "name": "Link Bad",
+      "address": "404 Error Rd"
+    },
+    {
+      "id": 3,
+      "email": "lisa@newcar.com",
+      "name": "Lisa Newcar",
+      "address": "5000 Port Ct"
+    },
+    {
+      "id": 4,
+      "email": "hannah@hall.com",
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jeremy Baker",
+      "locationId": 2
+    },
+    {
+      "id": 2,
+      "name": "Bake Jeremy",
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Jake Beremy",
+      "locationId": 2
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    },
+    {
+      "id": 3,
+      "name": "Nashville East",
+      "address": "7730 Fillpot Rd"
+    }
+  ]
 }

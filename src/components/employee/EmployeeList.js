@@ -26,7 +26,7 @@ export const EmployeeList = (props) => {
 		console.log("EmployeeList: Employee state changed");
 		console.log(employees);
 	}, [employees]);
-	
+
 	const history = useHistory();
 
 	return (
@@ -37,7 +37,7 @@ export const EmployeeList = (props) => {
 					history.push("/employees/create");
 				}}
 			>
-				Add Customer
+				Add Employee
 			</button>
 			<div className="employees">
 				<h2>Employees</h2>
