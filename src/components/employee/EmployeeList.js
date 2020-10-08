@@ -32,16 +32,15 @@ export const EmployeeList = (props) => {
 	return (
 		<>
 			<h2>Employees</h2>
-			<div className="btn">
+<div className="add__btn">
 				<button
-					className="add__btn"
 					onClick={() => {
 						history.push("/employees/create");
 					}}
 				>
 					Add Employee
 				</button>
-			</div>
+</div>
 			<div className="employees">
 				{employees.map((employee) => {
 					return <Employee key={employee.id} employee={employee} />;

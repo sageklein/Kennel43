@@ -48,6 +48,16 @@ export const ApplicationViews = (props) => {
 				</Route>
 			</AnimalProvider>
 
+			<AnimalProvider>
+				<LocationProvider>
+					<CustomerProvider>
+						<Route path="/animals/edit/:animalId(\d+)">
+							<AnimalForm />
+						</Route>
+					</CustomerProvider>
+				</LocationProvider>
+			</AnimalProvider>
+
 			<CustomerProvider>
 				<Route path="/customers">
 					<CustomerList />

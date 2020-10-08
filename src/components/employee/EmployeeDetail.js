@@ -28,18 +28,20 @@ export const EmployeeDetail = () => {
 			<section className="employee">
 				<h3 className="employee__name">{employee.name}</h3>
 				<div className="employee__location">
-					Location: {employee.address}
+					Location: {location.address}
+			<div className="btn">
+				<button
+					onClick={() => {
+						releaseEmployee(employee.id).then(() => {
+							history.push("/employees");
+						});
+					}}
+				>
+					Fire
+				</button>
 				</div>
+			</div>
 			</section>
-			<button
-				onClick={() => {
-					releaseEmployee(employee.id).then(() => {
-						history.push("/employees");
-					});
-				}}
-			>
-				Fire
-			</button>
 		</>
 	);
 };

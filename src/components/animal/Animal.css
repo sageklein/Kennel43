@@ -4,11 +4,21 @@
   justify-content: space-between;
 }
 
-.add__btn 
-.btn
-.btn-primary {
-   padding-left: 1.5em ;
-   border-radius: .2em; 
+.btn {
+  justify-content: space-around;
+
+}
+
+.add__btn {
+  padding-left: 1em;
+  border-radius: .1em;
+}
+
+.animalForm {
+  padding: 0 1em;
+  border-radius: .1em;
+  min-height: 6em;
+  max-width: 50em;
 }
 
 .animal {
@@ -20,5 +30,6 @@
 	padding: 0 1em;
 	color: black;
   border-radius: .1em;
-  min-height: 8em;
+  min-height: 10em;
+  max-width: 35em;
 }

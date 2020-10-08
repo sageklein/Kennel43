@@ -4,6 +4,10 @@
   justify-content: space-between;
 }
 
+.add__btn {
+  padding-left: 1em;
+  border-radius: .1em;
+}
 .customer {
 	background-color: #F6FBFE;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

@@ -3,9 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.btn{
-   padding-left: 1.5em ;
-   border-radius: .1em; 
+
+.add__btn {
+  padding-left: 1em;
+  border-radius: .1em;
 }
 .employee {
 	background-color: #F6FBFE;
@@ -16,5 +17,6 @@
 	padding: 0 1em;
 	color: black;
   border-radius: .1em;
-  min-height: 8em;
+  min-height: 10em;
+  max-width: 35em;
 }

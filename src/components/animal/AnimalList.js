@@ -19,9 +19,8 @@ export const AnimalList = () => {
 	return (
 		<>
 			<h2>Animals</h2>
-			<div className="btn">
+			<div className="btn add__btn">
 			<button
-				className="add__btn"
 				onClick={() => {
 					history.push("/animals/create");
 				}}

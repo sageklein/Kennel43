@@ -2,6 +2,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    padding-bottom: 5em;
+    padding-top: 2em;
+    font-size: 18px;
 }
 
 .navbar__item {
