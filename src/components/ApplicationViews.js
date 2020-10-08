@@ -12,6 +12,7 @@ import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeList } from "./employee/EmployeeList";
 import { EmployeeForm } from "./employee/EmployeeForm";
 import { EmployeeDetail } from "./employee/EmployeeDetail";
+import { AnimalSearch } from "./animal/AnimalSearch";
 
 export const ApplicationViews = (props) => {
 	return (
@@ -21,16 +22,6 @@ export const ApplicationViews = (props) => {
 					<LocationList />
 				</Route>
 			</LocationProvider>
-
-			<AnimalProvider>
-				<LocationProvider>
-					<CustomerProvider>
-						<Route exact path="/animals">
-							<AnimalList />
-						</Route>
-					</CustomerProvider>
-				</LocationProvider>
-			</AnimalProvider>
 
 			<AnimalProvider>
 				<LocationProvider>
@@ -56,6 +47,13 @@ export const ApplicationViews = (props) => {
 						</Route>
 					</CustomerProvider>
 				</LocationProvider>
+			</AnimalProvider>
+
+			<AnimalProvider>
+				<Route exact path="/animals">
+					<AnimalSearch />
+					<AnimalList />
+				</Route>
 			</AnimalProvider>
 
 			<CustomerProvider>

@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AnimalContext } from "./AnimalProvider";
 import "./Animal.css";
 
 export const AnimalSearch = () => {
 	const { setSearchTerms } = useContext(AnimalContext);
+
+	useEffect(() => {
+		setSearchTerms("");
+	}, []);
 
 	return (
 		<>
