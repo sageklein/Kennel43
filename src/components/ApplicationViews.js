@@ -11,6 +11,7 @@ import { CustomerList } from "./customer/CustomerList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeList } from "./employee/EmployeeList";
 import { EmployeeForm } from "./employee/EmployeeForm";
+import { EmployeeDetail } from "./employee/EmployeeDetail";
 
 export const ApplicationViews = (props) => {
 	return (
@@ -42,9 +43,9 @@ export const ApplicationViews = (props) => {
 			</AnimalProvider>
 
 			<AnimalProvider>
-			<Route exact path="/animals/detail/:animalId(\d+)">
-				<AnimalDetail />
-			</Route>
+				<Route exact path="/animals/detail/:animalId(\d+)">
+					<AnimalDetail />
+				</Route>
 			</AnimalProvider>
 
 			<CustomerProvider>
@@ -68,6 +69,12 @@ export const ApplicationViews = (props) => {
 					</LocationProvider>
 				</EmployeeProvider>
 			</AnimalProvider>
+
+			<EmployeeProvider>
+				<Route exact path="/employees/detail/:employeeId(\d+)">
+					<EmployeeDetail />
+				</Route>
+			</EmployeeProvider>
 		</>
 	);
 };

@@ -17,7 +17,7 @@ export const EmployeeDetail = () => {
 
 	useEffect(() => {
 		console.log("useEffect", employeeId);
-		getEmployeeById(EmployeeId).then((response) => {
+		getEmployeeById(employeeId).then((response) => {
 			setEmployee(response);
 			setLocation(response.location);
 		});
