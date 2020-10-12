@@ -129,20 +129,20 @@ export const AnimalForm = () => {
 							</option>
 						))}
 					</select>
-
-				<button
-					className="btn btn-primary"
-					disabled={isLoading}
-					onClick={(event) => {
-						event.preventDefault(); // Prevent browser from submitting the form
-						constructAnimalObject();
-					}}
-				>
-					{animalId ? <>Save</> : <>Add</>}
-				</button>
+					<div className="save__btn">
+						<button
+							className="btn btn-primary"
+							disabled={isLoading}
+							onClick={(event) => {
+								event.preventDefault(); // Prevent browser from submitting the form
+								constructAnimalObject();
+							}}
+						>
+							{animalId ? <>Save</> : <>Add</>}
+						</button>
+					</div>
 				</div>
 			</fieldset>
-
 		</form>
 	);
 };

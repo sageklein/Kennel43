@@ -3,15 +3,23 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.search__bar {
+  padding-left: 1em;
+  border-radius: .1em;
+  font-size: 14;
+}
 
 .btn {
   justify-content: space-around;
-
 }
 
 .add__btn {
   padding-left: 1em;
   border-radius: .1em;
+}
+
+.save__btn {
+  padding-top: 1em;
 }
 
 .animalForm {
