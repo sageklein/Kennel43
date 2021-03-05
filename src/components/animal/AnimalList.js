@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AnimalContext } from "./AnimalProvider";
 import { AnimalCard } from "./AnimalCard";
+import { AnimalSearch } from "./AnimalSearch";
 import "./Animal.css";
 import { useHistory } from "react-router-dom";
 
@@ -35,6 +36,7 @@ export const AnimalList = () => {
 	return (
 		<>
 			<h2>Animals</h2>
+			<AnimalSearch />
 			<div className="">
 				<div className="btn add__btn">
 					<button onClick={() => history.push("/animals/create")}>

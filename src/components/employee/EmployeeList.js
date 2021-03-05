@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { EmployeeContext } from "./EmployeeProvider";
+import { EmployeeSearch } from "./EmployeeSearch"
 import { Employee } from "./Employee";
 import "./Employee.css";
 import { useHistory } from "react-router-dom";
@@ -47,6 +48,7 @@ export const EmployeeList = (props) => {
 	return (
 		<>
 			<h2>Employees</h2>
+			<EmployeeSearch />
 			<div className="add__btn">
 				<button
 					onClick={() => {
