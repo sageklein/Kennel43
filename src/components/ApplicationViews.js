@@ -12,6 +12,7 @@ import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeList } from "./employee/EmployeeList";
 import { EmployeeForm } from "./employee/EmployeeForm";
 import { EmployeeDetail } from "./employee/EmployeeDetail";
+import { EmployeeSearch } from "./employee/EmployeeSearch";
 import { AnimalSearch } from "./animal/AnimalSearch";
 
 export const ApplicationViews = (props) => {
@@ -65,6 +66,7 @@ export const ApplicationViews = (props) => {
 			<AnimalProvider>
 				<EmployeeProvider>
 					<LocationProvider>
+					<EmployeeSearch />
 						<Route
 							exact
 							path="/employees"
