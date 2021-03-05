@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { EmployeeContext } from "./EmployeeProvider";
 import { Employee } from "./Employee";
 import "./Employee.css";
@@ -6,7 +6,11 @@ import { useHistory } from "react-router-dom";
 
 export const EmployeeList = (props) => {
 	// This state changes when `getEmployees()` is invoked below
-	const { employees, getEmployees } = useContext(EmployeeContext);
+	const { employees, getEmployees, searchTerms } = useContext(EmployeeContext);
+
+	const [filteredEmployees, setFiltered] = useState([]);
+
+	const history = useHistory();
 
 	/*
         What's the effect this is reponding to? Component was
@@ -22,17 +26,28 @@ export const EmployeeList = (props) => {
         This effect is solely for learning purposes. The effect
         it is responding to is that the Employee state changed.
     */
+	// searchTerms will cause a change
 	useEffect(() => {
-		console.log("EmployeeList: Employee state changed");
-		console.log(employees);
-	}, [employees]);
+		if (searchTerms !== "") {
+			// If the search field is not blank, display matching employees
+			const subset = employees.filter((employee) =>
+				employee.name
+					.toLowerCase()
+					.includes(searchTerms.toLowerCase().trim())
+			);
+			setFiltered(subset);
+		} else {
+			// If the search field is blank, display all animals
+			setFiltered(employees);
+		}
+	}, [searchTerms, employees]);
 
-	const history = useHistory();
+
 
 	return (
 		<>
 			<h2>Employees</h2>
-<div className="add__btn">
+			<div className="add__btn">
 				<button
 					onClick={() => {
 						history.push("/employees/create");
@@ -40,9 +55,9 @@ export const EmployeeList = (props) => {
 				>
 					Add Employee
 				</button>
-</div>
+			</div>
 			<div className="employees">
-				{employees.map((employee) => {
+				{filteredEmployees.map((employee) => {
 					return <Employee key={employee.id} employee={employee} />;
 				})}
 			</div>

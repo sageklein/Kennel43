@@ -3,36 +3,71 @@
     {
       "id": 1,
       "name": "Doodles",
-      "locationId": 2,
-      "customerId": 1
+      "breed": "Dog",
+      "customerId": 1,
+      "locationId": 2
     },
     {
       "id": 2,
       "name": "Koopa",
       "breed": "Tortoise",
-      "customerId": 1,
+      "customerId": 2,
       "locationId": 2
     },
     {
       "id": 3,
       "name": "Maggie",
       "breed": "Tabby",
+      "customerId": 3,
+      "locationId": 2
+    },
+    {
+      "id": 4,
+      "name": "Thomas",
+      "breed": "Tuxedo Boy",
+      "customerId": 4,
+      "locationId": 2
+    },
+    {
+      "id": 5,
+      "name": "Koopa",
+      "breed": "Tortoise",
+      "customerId": 5,
+      "locationId": 2
+    },
+    {
+      "id": 6,
+      "name": "Oy",
+      "breed": "Dog",
       "customerId": 1,
       "locationId": 2
     },
     {
-      "name": "Thomas",
-      "breed": "Tuxedo Boy",
-      "locationId": 2,
-      "customerId": 2,
-      "id": 4
+      "id": 7,
+      "name": "Taco",
+      "breed": "Fish",
+      "customerId": 4,
+      "locationId": 2
+    },
+    {
+      "id": 8,
+      "name": "HeadFace",
+      "breed": "Fish",
+      "customerId": 4,
+      "locationId": 2
+    },
+    {
+      "name": "Mr. Willy",
+      "locationId": 1,
+      "customerId": 5,
+      "id": 9
     }
   ],
   "customers": [
     {
       "id": 1,
-      "email": "hannah@hall.com",
-      "name": "Hannah Hall",
+      "email": "sage@sage.sage",
+      "name": "Sage Klein",
       "address": "7002 Chestnut Ct"
     },
     {
@@ -45,13 +80,37 @@
       "id": 3,
       "email": "lisa@newcar.com",
       "name": "Lisa Newcar",
-      "address": "5000 Port Ct"
+      "address": "5000 Port St"
     },
     {
       "id": 4,
       "email": "hannah@hall.com",
       "name": "Hannah Hall",
       "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 5,
+      "email": "koopa@turtle.com",
+      "name": "Koopa T Turtle",
+      "address": "342 Applegate Ave"
+    },
+    {
+      "id": 6,
+      "email": "trisha@paytas.com",
+      "name": "Trisha Paytas",
+      "address": "2953 Rich St"
+    },
+    {
+      "id": 7,
+      "email": "scott@nss.com",
+      "name": "Scott Silver",
+      "address": "7740 Riverside St"
+    },
+    {
+      "id": 8,
+      "email": "aja@nss.com",
+      "name": "Aja Washington",
+      "address": "452 Cambell Ct"
     }
   ],
   "employees": [
@@ -69,6 +128,22 @@
       "id": 3,
       "name": "Jake Beremy",
       "locationId": 3
+    },
+    {
+      "id": 4,
+      "name": "Sarah Johnson",
+      "locationId": 3
+    },
+    {
+      "id": 5,
+      "name": "John Sarahnson",
+      "locationId": 2
+    },
+    {
+      "name": "Fasty Friday",
+      "locationId": 2,
+      "animalId": 3,
+      "id": 6
     }
   ],
   "locations": [
